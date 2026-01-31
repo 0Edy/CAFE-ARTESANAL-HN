@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f0e8 0%, #e8d9c2 100%);
+    min-height: 100vh;
+}
+
+.parent {
+    min-height: 100vh;
+}
+
+nav {
+    background: rgba(111, 78, 55, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #d4a574;
+}
+
+.hero {
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(111, 78, 55, 0.9);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #f4e4d9;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: #6f4e37;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.cards-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.card_image img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: #6f4e37;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #6f4e37;
+}
+
+.btn-order {
+    background: #6f4e37;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    touch-action: manipulation;
+}
+
+.btn-order:hover,
+.btn-order:active {
+    background: #8b5e3c;
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    nav h1 {
+        font-size: 1.8rem;
+}
+    
+nav ul {
+    flex-direction: row;
+    gap: 1.5rem;
+}
+    
+.hero img {
+    height: 300px;
+}
+    
+.hero-content h2 {
+    font-size: 2.5rem;
+}
+    
+.cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+    
+.card {
+     padding: 2rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    nav {
+     padding: 1.5rem 2rem;
+}
+    
+nav ul {
+     gap: 2rem;
+}
+    
+.hero img {
+    height: 400px;
+    border-radius: 20px;
+}
+    
+.cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+    
+.section-title {
+    font-size: 2.5rem;
+}
+    
+.card h3 {
+    font-size: 1.5rem;
+}
+}
+
+@media (min-width: 1400px) {
+    .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    }
+}
